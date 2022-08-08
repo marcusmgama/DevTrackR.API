@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CuQyKtd8OsYBBJOi+tQgulPFpkHEuQ2YW1bqzL3rxOIxQz9qwGtiTdXQYqknKmPFvUi8ymoQEAfhBd9RqDqhGg==",
+  "dgSpecHash": "NGeX5nwmEDkTFySElK+Y9rSJxstrgZLcLoghHFVxUDFRT7hU1J0NcFwsLlH2RW87F2/nIQ0gy/i0wxloO8O9nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
+  "projectFilePath": "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

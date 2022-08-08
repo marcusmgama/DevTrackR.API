@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DevTrackR.API.Entities;
+using DevTrackR.API.Models;
+using DevTrackR.API.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevTrackR.API.Controllers
@@ -11,30 +9,50 @@ namespace DevTrackR.API.Controllers
     [Route("/api/packages")]
     public class PackagesController : ControllerBase
     {
+        private readonly DevTrackRContext _context;
+        public PackagesController(DevTrackRContext context)
+        {
+            _context = context;
+        }
         [HttpGet]
-        public IActionResult GetAll() {
-            var packages = new List<Package>{
-                new Package("Pacote 1", 1.3m),
-                new Package("Pacote 2", 0.2m),
-            };
+        public IActionResult GetAll()
+        {
+            var packages = _context.Packages;
             return Ok(packages);
         }
-    [HttpGet("{code}")]
-        public IActionResult GetByCode(string code) {
-            var package = new Package ("Pacote 2", 0.2m);
+        // GET api/packages/guid(identificador)
+        [HttpGet("{code}")]
+        public IActionResult GetByCode(string code)
+        {
+            var package = _context.Packages.SingleOrDefault(p => p.Code == code);
+            if(package == null) {
+                return NotFound();
+            }
             return Ok(package);
 
         }
         //POST api/packages
         [HttpPost]
-        public IActionResult Post(Package package) {
-            return Ok(package);
-            
+        public IActionResult Post(AddPackageInputModel model)
+        {
+            if (model.Title.Length < 10) {
+                return BadRequest("Title lenght must be at least 10 characters");
+            }
+            var package = new Package(model.Title, model.Weight);
+            _context.Packages.Add(package);
+            return CreatedAtAction("GetByCode", new { code = package.Code }, package);
+
         }
         //POST api/package/guid(identificador)/updates
-        [HttpPost("{code}")]
-        public IActionResult PostUpdates(string code) {
-            return Ok();
+        [HttpPost("{code}/updates")]
+        public IActionResult PostUpdate(string code, AddPackageUpdateInputModel model)
+        {
+            var package = _context.Packages.SingleOrDefault(p => p.Code == code);
+            if(package == null) {
+                return NotFound();
+            }
+            package.AddUpdate(model.Status, model.Delivered);
+            return NoContent();
         }
-     }
+    }
 }

@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace DevTrackR.API.Models
 {
-    public class AddPackageInputModel
+    public class AddPackageUpdateInputModel
     {
-        public string? Title { get; set; }
-        public decimal Weight { get; set; }
-        
+        public string? Status { get; set; }
+        public bool Delivered { get; set; }
     }
 }

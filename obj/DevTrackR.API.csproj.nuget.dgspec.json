@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj": {}
+    "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj": {
+    "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
+        "projectUniqueName": "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
         "projectName": "DevTrackR.API",
-        "projectPath": "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
+        "projectPath": "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\DevTrackR.API.csproj",
         "packagesPath": "C:\\Users\\marcu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcu\\desktop\\backup\\marcus\\jornada.net\\DevTrackR.API\\obj\\",
+        "outputPath": "C:\\Users\\marcu\\Desktop\\backup\\Marcus\\jornada.net\\DevTrackR.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
